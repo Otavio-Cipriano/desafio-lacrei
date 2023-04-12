@@ -1,34 +1,37 @@
 import React, { useEffect, useState } from 'react'
-import styled from './Navbar.styled'
+import style from './Navbar.styled'
 import { useRouter } from 'next/router'
+import NavbarToggle from './NavbarToggle'
 
 export default function Navbar() {
-    const router = useRouter() 
+    const router = useRouter()
     const [currentPage, setCurrentPage] = useState(router.pathname)
 
-    useEffect(() =>{
+    useEffect(() => {
         setCurrentPage(router.pathname)
     }, [router])
 
     return (
-        <styled.Navbar>
-            <styled.NavBrand >
-                <styled.NavLink href={`/`}>
+        <style.Navbar>
+            <style.NavBrand >
+                <style.NavLink href={`/`}>
                     Lacrei
-                </styled.NavLink>
-            </styled.NavBrand>
-            <styled.NavToggle/>
-            <styled.Nav>
-                <styled.NavItem>
-                    <styled.NavLink href={'/'} $isActive={currentPage == '/'}>Home</styled.NavLink>
-                </styled.NavItem>
-                <styled.NavItem>
-                    <styled.NavLink  href={'/pessoa-usuaria'} $isActive={currentPage == '/pessoa-usuaria'}>Pessoa Usuária</styled.NavLink>
-                </styled.NavItem>
-                <styled.NavItem>
-                    <styled.NavLink href={'/pessoa-profissional'} $isActive={currentPage == '/pessoa-profissional'}>Profissional</styled.NavLink>
-                </styled.NavItem>
-            </styled.Nav>
-        </styled.Navbar>
+                </style.NavLink>
+            </style.NavBrand>
+            <NavbarToggle />
+            <style.NavCollapse>
+                <style.Nav>
+                    <style.NavItem>
+                        <style.NavLink href={'/'} $isActive={currentPage == '/'}>Home</style.NavLink>
+                    </style.NavItem>
+                    <style.NavItem>
+                        <style.NavLink href={'/pessoa-usuaria'} $isActive={currentPage == '/pessoa-usuaria'}>Pessoa Usuária</style.NavLink>
+                    </style.NavItem>
+                    <style.NavItem>
+                        <style.NavLink href={'/pessoa-profissional'} $isActive={currentPage == '/pessoa-profissional'}>Profissional</style.NavLink>
+                    </style.NavItem>
+                </style.Nav>
+            </style.NavCollapse>
+        </style.Navbar>
     )
 }

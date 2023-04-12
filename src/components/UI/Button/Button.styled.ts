@@ -27,6 +27,7 @@ const Button = styled.button<{ $variant?: 'primary' | 'secondary', $disabled?: b
     padding-block: 0.8rem;
     font-weight: 600;
     font-size: 1rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     ${props => props.$variant && variants[props.$variant]}
     ${props => props.$disabled && disabled}
 `;

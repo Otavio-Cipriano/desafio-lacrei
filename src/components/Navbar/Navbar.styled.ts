@@ -40,14 +40,21 @@ const NavLink = styled(NextLink)<{$isActive?: boolean}>`
 
 const NavToggle = styled.div`
     display: none;
+    width: 50px;
+    color: ${colors.black};
 
-    @media ${medias.md} {
+    @media (${medias.md}) {
         display: block;
     }
 `;
 
 const NavCollapse = styled.div`
-    display: none;
+    /* display: none; */
+
+    @media (${medias.md}){
+        display: block;
+        position: absolute;
+    }
 `;
 
-export default { Nav, NavItem, Navbar, NavLink, NavBrand, NavToggle }
+export default { Nav, NavItem, Navbar, NavLink, NavBrand, NavToggle, NavCollapse }

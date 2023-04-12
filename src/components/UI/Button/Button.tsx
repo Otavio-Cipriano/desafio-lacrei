@@ -1,4 +1,4 @@
-import styled from './Button.styled'
+import style from './Button.styled'
 
 interface ButtonProps {
     onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
@@ -9,11 +9,11 @@ interface ButtonProps {
 
 export default function Button({ onClick, disabled, children, variant = 'primary'}: ButtonProps) {
     return (
-        <styled.Button
+        <style.Button
             $variant={variant}
             $disabled={disabled}
             onClick={onClick}>
             {children}
-        </styled.Button>
+        </style.Button>
     )
 }

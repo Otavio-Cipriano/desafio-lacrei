@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar/Navbar"
 import Head from "next/head"
 
 interface MainProps {
-    children?: JSX.Element
+    children?: React.ReactNode
 }
 
 export default function Main({ children }: MainProps) {
