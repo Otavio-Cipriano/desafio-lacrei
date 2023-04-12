@@ -17,6 +17,7 @@ export default function Navbar() {
                     Lacrei
                 </styled.NavLink>
             </styled.NavBrand>
+            <styled.NavToggle/>
             <styled.Nav>
                 <styled.NavItem>
                     <styled.NavLink href={'/'} $isActive={currentPage == '/'}>Home</styled.NavLink>

@@ -13,9 +13,13 @@ const Navbar = styled.nav`
 `;
 
 const NavBrand = styled.div`
-    color: ${colors.green};
+    
     font-size: 2rem;
     font-weight: bolder;
+
+    a{
+        color: ${colors.green};
+    }
 `;
 
 const Nav = styled.ul`
@@ -46,4 +50,4 @@ const NavCollapse = styled.div`
     display: none;
 `;
 
-export default { Nav, NavItem, Navbar, NavLink, NavBrand }
+export default { Nav, NavItem, Navbar, NavLink, NavBrand, NavToggle }
