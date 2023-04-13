@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer/Footer"
 import Navbar from "@/components/Navbar/Navbar"
 import Head from "next/head"
 
@@ -16,6 +17,7 @@ export default function Main({ children }: MainProps) {
             </Head>
             <Navbar/>
             {children}
+            <Footer/>
         </>
     )
 }

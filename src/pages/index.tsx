@@ -8,19 +8,17 @@ export default function Home() {
     <>
       <main>
         <Container>
-          <div>
+          <Row>
             <div>
               <Typography tag="h2" size="xxlarge">Boas Vindas a Lacrei Saúde</Typography>
-              <p>
-                Uma plataforma segura e acolhedora para comunidade LGBTQIAPN+
-              </p>
+              <Typography tag="p" size="large" color="darkGray">Uma plataforma segura e acolhedora para comunidade LGBTQIAPN+</Typography>
               <Button variant="primary">Pessoa Usuária</Button>
               <Button variant="secondary">Profissional</Button>
             </div>
-            <div>
+            <div style={{position: 'relative'}}>
               <NextImage src={'/rafiki1.svg'} alt="Doutora Acenando"  fill/>
             </div>
-          </div>
+          </Row>
         </Container>
       </main>
     </>
@@ -29,4 +27,8 @@ export default function Home() {
 
 const Row = styled.div`
   display: flex;
+
+  div{
+    flex: 1;
+  }
 `
