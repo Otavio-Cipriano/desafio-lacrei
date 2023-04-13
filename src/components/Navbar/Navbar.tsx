@@ -5,7 +5,7 @@ import NavbarToggle from './NavbarToggle'
 
 export default function Navbar() {
     const router = useRouter()
-    const [currentPage, setCurrentPage] = useState(router.pathname)
+    const [currentPage, setCurrentPage] = useState<string>(router.pathname)
 
     useEffect(() => {
         setCurrentPage(router.pathname)
@@ -18,20 +18,17 @@ export default function Navbar() {
                     Lacrei
                 </style.NavLink>
             </style.NavBrand>
-            <NavbarToggle />
-            <style.NavCollapse>
-                <style.Nav>
-                    <style.NavItem>
-                        <style.NavLink href={'/'} $isActive={currentPage == '/'}>Home</style.NavLink>
-                    </style.NavItem>
-                    <style.NavItem>
-                        <style.NavLink href={'/pessoa-usuaria'} $isActive={currentPage == '/pessoa-usuaria'}>Pessoa Usuária</style.NavLink>
-                    </style.NavItem>
-                    <style.NavItem>
-                        <style.NavLink href={'/pessoa-profissional'} $isActive={currentPage == '/pessoa-profissional'}>Profissional</style.NavLink>
-                    </style.NavItem>
-                </style.Nav>
-            </style.NavCollapse>
+            <style.Nav>
+                <style.NavItem>
+                    <style.NavLink href={'/'} $isActive={currentPage == '/'}>Home</style.NavLink>
+                </style.NavItem>
+                <style.NavItem>
+                    <style.NavLink href={'/pessoa-usuaria'} $isActive={currentPage == '/pessoa-usuaria'}>Pessoa Usuária</style.NavLink>
+                </style.NavItem>
+                <style.NavItem>
+                    <style.NavLink href={'/pessoa-profissional'} $isActive={currentPage == '/pessoa-profissional'}>Profissional</style.NavLink>
+                </style.NavItem>
+            </style.Nav>
         </style.Navbar>
     )
 }

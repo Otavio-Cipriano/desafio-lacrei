@@ -1,4 +1,4 @@
-import styled, {css} from "styled-components";
+import styled, { css } from "styled-components";
 import NextLink from 'next/link'
 import { colors } from "@/styles/Variables";
 import { medias } from "@/styles/Breakpoints";
@@ -31,7 +31,7 @@ const Nav = styled.ul`
 
 const NavItem = styled.li``;
 
-const NavLink = styled(NextLink)<{$isActive?: boolean}>`
+const NavLink = styled(NextLink) <{ $isActive?: boolean }>`
     text-decoration: none;
     padding-inline: 1rem;
     font-weight: 700;
@@ -42,18 +42,24 @@ const NavToggle = styled.div`
     display: none;
     width: 50px;
     color: ${colors.black};
+    cursor: pointer;
 
     @media (${medias.md}) {
         display: block;
     }
 `;
 
-const NavCollapse = styled.div`
+const NavCollapse = styled.div<{ $isVisible?: boolean }>`
     /* display: none; */
-
     @media (${medias.md}){
         display: block;
         position: absolute;
+
+        ${props => !props.$isVisible &&
+        css`
+            display: none;
+        `
+        }
     }
 `;
 

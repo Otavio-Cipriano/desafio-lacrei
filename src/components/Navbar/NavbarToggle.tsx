@@ -1,9 +1,13 @@
 import {Menu} from '@styled-icons/boxicons-regular/Menu'
 import style from './Navbar.styled'
 
-export default function NavbarToggle() {
+interface ButtonProps {
+  onClick?: (event: React.MouseEvent) => void;
+}
+
+export default function NavbarToggle({onClick}: ButtonProps) {
   return (
-    <style.NavToggle>
+    <style.NavToggle onClick={onClick}>
         <Menu/>
     </style.NavToggle>
   )
