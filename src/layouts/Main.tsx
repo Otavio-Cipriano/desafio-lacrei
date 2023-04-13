@@ -17,9 +17,7 @@ export default function Main({ children }: MainProps) {
             </Head>
             <Navbar/>
             {children}
-            <Footer>
-                
-            </Footer>
+            <Footer/>
         </>
     )
 }

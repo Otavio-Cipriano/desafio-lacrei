@@ -1,10 +1,10 @@
 import { FONT } from '@/styles/Variables'
 import * as style from './Typography.styled'
 
-type TagVariants = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span'
+// type TagVariants = 
 
-interface ITypography {
-  tag?: TagVariants,
+export interface ITypography {
+  tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span',
   size?: keyof typeof FONT.sizes,
   color?: keyof typeof FONT.colors,
   children: React.ReactNode
