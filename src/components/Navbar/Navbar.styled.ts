@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import NextLink from 'next/link'
 import { colors } from "@/styles/Variables";
-import { medias } from "@/styles/Breakpoints";
+import { breakpoints, medias } from "@/styles/Breakpoints";
 
 
 const Navbar = styled.nav`
@@ -10,6 +10,13 @@ const Navbar = styled.nav`
     justify-content: space-between;
     padding: 0.6rem;
     background-color: ${colors.gray};
+
+    >div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
 `;
 
 const NavBrand = styled.div`
@@ -50,7 +57,7 @@ const NavToggle = styled.div`
 `;
 
 const NavCollapse = styled.div<{ $isVisible?: boolean }>`
-    /* display: none; */
+
     @media (${medias.md}){
         display: block;
         position: absolute;
