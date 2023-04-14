@@ -27,9 +27,21 @@ export default function Footer({ children }: IFooter) {
           <style.FooterLink href={'/pessoa-profissional'} $isActive={currentPage == '/pessoa-profissional'}>Profissional</style.FooterLink>
         </style.FooterNav>
         <style.FooterLogos>
-          <style.FooterLogo><InstagramLogo /></style.FooterLogo>
-          <style.FooterLogo><FacebookLogo /></style.FooterLogo>
-          <style.FooterLogo><LinkedinLogo /></style.FooterLogo>
+          <style.FooterLogo>
+            <a href="https://www.instagram.com/lacrei.saude" target='_blank'>
+              <InstagramLogo />
+            </a>
+          </style.FooterLogo>
+          <style.FooterLogo>
+            <a href="https://www.facebook.com/lacrei.saude" target='_blank'>
+              <FacebookLogo />
+            </a>
+          </style.FooterLogo>
+          <style.FooterLogo>
+            <a href="https://www.linkedin.com/company/lacrei" target='_blank'>
+              <LinkedinLogo />
+            </a>
+          </style.FooterLogo>
         </style.FooterLogos>
         <Typography size='small'>Desafio Front-end Lacrei</Typography>
         <Typography size='small'>Built By Otavio Cipriano, 2023</Typography>

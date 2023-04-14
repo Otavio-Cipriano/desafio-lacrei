@@ -51,9 +51,13 @@ const Section = styled.section`
 
         button{
             flex: 1;
-            max-width: 200px;
             width: 100%;
             font-size: 1.1rem;
+        }
+
+        a{
+            width: 100%;
+            max-width: 200px;
         }
 
         @media (${medias.md}){justify-content: center; }

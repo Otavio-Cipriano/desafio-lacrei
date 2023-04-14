@@ -1,5 +1,5 @@
 import Section from "@/components/Section/Section";
-import { Button, Container, Typography } from "@/components/UI";
+import { Button, Container, Typography, Link } from "@/components/UI";
 import NextImage from "next/image";
 
 export default function Home() {
@@ -13,8 +13,8 @@ export default function Home() {
                 <Typography tag="h2" size="xxlarge">Boas Vindas a Lacrei Saúde</Typography>
                 <Typography tag="p" size="large" color="darkGray">Uma plataforma segura e acolhedora para comunidade LGBTQIAPN+</Typography>
                 <div className="button-group">
-                  <Button variant="primary">Pessoa Usuária</Button>
-                  <Button variant="secondary">Profissional</Button>
+                  <Link href="/pessoa-usuaria"><Button variant="primary">Pessoa Usuária</Button></Link>
+                  <Link href="/pessoa-profissional"><Button variant="secondary">Profissional</Button></Link>
                 </div>
               </div>
               <div >

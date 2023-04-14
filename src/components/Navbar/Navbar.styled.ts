@@ -6,6 +6,7 @@ import { breakpoints, medias } from "@/styles/Breakpoints";
 
 const Navbar = styled.nav`
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: space-between;
     padding: 0.6rem;
@@ -17,10 +18,16 @@ const Navbar = styled.nav`
         align-items: center;
         width: 100%;
     }
+
+    @media (${medias.sm}){
+        >div{
+            flex-direction: column;
+            gap: 1rem;
+        }
+    }
 `;
 
 const NavBrand = styled.div`
-    
     font-size: 2rem;
     font-weight: bolder;
 
@@ -43,31 +50,7 @@ const NavLink = styled(NextLink) <{ $isActive?: boolean }>`
     padding-inline: 1rem;
     font-weight: 700;
     color: ${props => props.$isActive ? colors.green : colors.black};
+
 `;
 
-const NavToggle = styled.div`
-    display: none;
-    width: 50px;
-    color: ${colors.black};
-    cursor: pointer;
-
-    @media (${medias.md}) {
-        display: block;
-    }
-`;
-
-const NavCollapse = styled.div<{ $isVisible?: boolean }>`
-
-    @media (${medias.md}){
-        display: block;
-        position: absolute;
-
-        ${props => !props.$isVisible &&
-        css`
-            display: none;
-        `
-        }
-    }
-`;
-
-export default { Nav, NavItem, Navbar, NavLink, NavBrand, NavToggle, NavCollapse }
+export default { Nav, NavItem, Navbar, NavLink, NavBrand}

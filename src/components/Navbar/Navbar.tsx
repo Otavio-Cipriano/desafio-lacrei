@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import style from './Navbar.styled'
 import { useRouter } from 'next/router'
-import NavbarToggle from './NavbarToggle'
 import { Container } from '../UI'
 
 export default function Navbar() {
