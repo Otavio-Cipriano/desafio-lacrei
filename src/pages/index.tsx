@@ -1,10 +1,14 @@
 import Section from "@/components/Section/Section";
 import { Button, Container, Typography, Link } from "@/components/UI";
+import Head from "next/head";
 import NextImage from "next/image";
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Home | Desafio Lacrei</title>
+      </Head>
       <main>
         <Container>
           <Section>
